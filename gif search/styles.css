@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    background-color: rgb(56, 0, 109);
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+input {
+    width: 500px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.sub {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: rgb(0, 190, 0);
+    color: white;
+}
+
+.loader {
+    display: none;
+    width: 15em;
+    height: 15em;
+    border: 3em solid rgb(36, 1, 70);
+    border-radius: 50%;
+    border-top-color: rgb(0, 190, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 3s infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: translate(-50%, -50%) rotate(350deg);
+    }
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gif {
+    width: 32%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(36, 1, 70);
+}
+
+.image {
+    width: 100%;
+    height: calc(100% - 55px);
+}
+
+.gif img {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.copy {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 190, 0);
+    cursor: pointer;
+    color: white;
+}
+
+
+@media screen and (max-width: 1170px) {
+    .gif {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .gif {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .form {
+        gap: 10px;
+    }
+
+    input {
+        width: 300px;
+        padding: 10px;
+    }
+    
+    .sub {
+        padding: 10px 20px;
+    }
+
+    .gif {
+        width: 100%;
+    }
+}
