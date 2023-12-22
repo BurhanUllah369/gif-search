@@ -6,7 +6,7 @@ const getGifs = () => {
     const input = document.querySelector('input')
     const count = 12
 
-    let finalUrl = `https://api.giphy.com/v1/gifs/search?api_key=Bx0Ij8dEPbx3hHScgw1VHrAOiP3ZeKZc&q=${input.value}&limit=${count}&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+    let finalUrl = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${input.value}&limit=${count}&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
     container.innerHTML = ''
     fetch(finalUrl)
     .then(data => data.json())
