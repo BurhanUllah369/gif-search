@@ -34,7 +34,7 @@ function App() {
   };
 
   useEffect(() => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=Bx0Ij8dEPbx3hHScgw1VHrAOiP3ZeKZc&q=${value}&limit=15&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${value}&limit=15&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
     fetch(url)
       .then((data) => data.json())
       .then((item) => {
